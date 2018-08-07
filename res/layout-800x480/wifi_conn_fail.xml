@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0a9e48" >
+
+        <TextView
+            android:id="@+id/tv_top_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:text="WiFi密码查看器"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_top"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_top_selector" />
+
+        <ImageView
+            android:id="@+id/iv_top_prog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_top_name"
+            android:src="@drawable/ic_wifi_prog"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#53bb7e" />
+
+    <RelativeLayout
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/wv"
+        android:layout_height="match_parent" >
+
+        <!--
+        <RelativeLayout
+            android:id="@+id/rl_suc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="#0a9e48" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_wifi_not_conn" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="14dp"
+                android:text="尚未接入WiFI"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+        -->
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.emilsjolander.components.stickylistheaders.StickyListHeadersListView
+                android:id="@+id/lv_wifi_no_conn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.emilsjolander.components.stickylistheaders.StickyListHeadersListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/wv"
+        android:layout_width="match_parent"
+        android:layout_height="350dp" />
+
+</RelativeLayout>

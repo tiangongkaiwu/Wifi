@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0a9e48" >
+
+        <TextView
+            android:id="@+id/tv_top_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:text="WiFi密码查看器"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_top"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_top_selector" />
+
+        <ImageView
+            android:id="@+id/iv_top_prog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_top_name"
+            android:src="@drawable/ic_wifi_prog"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/top"
+        android:background="#53bb7e" />
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0a9e48"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_wifi_suc" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:paddingBottom="5dp"
+            android:text="已连接  "
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/wv"
+        android:layout_below="@+id/line" >
+
+        <RelativeLayout
+            android:id="@+id/rl_suc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="#0a9e48" >
+
+            <LinearLayout
+                android:id="@+id/ll_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal" >
+
+                <cn.hudun.wifi.pwd.view.DrawableText
+                    android:id="@+id/tv_single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#099240"
+                    android:drawableLeft="@drawable/ic_single"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="100%"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/v"
+                    android:layout_width="1dp"
+                    android:layout_height="45dp"
+                    android:background="#018637"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_down"
+                    android:visibility="gone" />
+
+                <cn.hudun.wifi.pwd.view.DrawableText
+                    android:id="@+id/tv_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#099240"
+                    android:drawableLeft="@drawable/ic_wifi_speed"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="100K/s"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/rl_suc"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_wangsu" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:layout_toRightOf="@+id/imageView3"
+                android:text="网速:"
+                android:textColor="#676767"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_net_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textView1"
+                android:text="100K/s"
+                android:textColor="#017433"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ll_speed"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/imageView2"
+                android:text="好友  分享"
+                android:textColor="#676767"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_share"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_wifi_dis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_wifi_dis_selector"
+                android:gravity="center"
+                android:text="断开此WiFi"
+                android:textColor="#099240"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <SlidingDrawer
+            android:id="@+id/drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:bottomOffset="-0dp"
+            android:content="@+id/content"
+            android:handle="@+id/handle"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:id="@id/handle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/ll_slide_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <cn.hudun.wifi.pwd.view.DrawableText
+                        android:id="@+id/tv_slide_single"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#099240"
+                        android:drawableLeft="@drawable/ic_single"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="100%"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/iv_slide_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_up"
+                        android:visibility="visible" />
+
+                    <cn.hudun.wifi.pwd.view.DrawableText
+                        android:id="@+id/tv_slide_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#099240"
+                        android:drawableLeft="@drawable/ic_wifi_speed"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="100K/s"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white" >
+
+                <ImageView
+                    android:id="@+id/iv_no_wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/no_wifi" />
+
+                <ListView
+                    android:id="@+id/lv_wifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_cp"
+                    android:divider="@null" >
+                </ListView>
+
+                <TextView
+                    android:id="@+id/tv_cp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/ic_wifi_conn_selector"
+                    android:padding="8dp"
+                    android:text="查看密码"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </SlidingDrawer>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/wv"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

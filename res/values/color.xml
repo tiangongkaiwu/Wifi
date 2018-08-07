@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white1">#f5f5f5</color>
+    <color name="header_normal">#00000000</color>
+    <color name="header_pressed">#ff7474F6</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="gold">#b89766</color>
+    <color name="black">#000000</color>
+    <color name="textColor">#017433</color>
+    <color name="popwin">#e8e8e8</color>
+
+</resources>

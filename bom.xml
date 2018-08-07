@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <dependencies>
+
+        <dependency>
+
+            <groupId>
+com.marsor.android.common
+            </groupId>
+
+            <artifactId>
+MarsorUtils
+            </artifactId>
+
+            <version>
+1.0.0-SNAPSHOT
+            </version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+
+        <repository>
+
+            <id>
+MarsorRepository
+            </id>
+
+            <name>
+Marsor Maven Mirror
+            </name>
+
+            <url>
+http://maven.marsorstudio.cn:8088/
+            </url>
+        </repository>
+    </repositories>
+
+    <package>
+
+        <!-- 不区分大小写，逗号隔开的metaName,代表不同SDK的渠道标识符 -->
+
+        <channels keyname="BaiduMobAd_CHANNEL" >
+
+            <!-- channel的数量代表最终生成的apk文件的数量 -->
+            <channel value="360yingyong" />
+           
+ <channel value="anzhi" />  
+       <channel value="baiduyingyong" />  
+            
+            <channel value="wandoujia" /> 
+            
+            
+             <channel value="xiaomi" /> 
+               
+
+            <channel value="tengxunyingyongbao" /> 
+
+           <channel value="jinli" /> 
+
+
+             <channel value="maopaotang" />  
+
+
+             <channel value="Nduowang" />  
+
+             <channel value="androidmark" />  
+
+             <channel value="baiduyingyong" />    
+
+       <channel value="91wuxian" />  
+             <channel value="anzhi" />  
+
+
+              <channel value="zhangshangyingyonghui" />  
+
+
+              <channel value="mumayi" />  
+
+
+
+              <channel value="liantongwo" />
+
+
+            <channel value="tongyong" /> 
+
+
+             <channel value="yidong" /> 
+
+
+            <channel value="jifengwang" />  
+
+
+            <channel value="lianxiang" />  
+
+
+              <channel value="huawei" />  
+
+
+             <channel value="oppo" />  
+        
+        </channels>
+
+        <keystore
+            passwd="hudun2014"
+            path="D:\hudun\recovery.keystore" >
+
+            <alias
+                name="hudun"
+                passwd="hudun2014" />
+        </keystore>
+
+        <outpath value="F:\hudun\apkdir\" />
+    </package>
+
+</project>            -->

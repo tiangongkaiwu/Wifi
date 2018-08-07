@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WiFi伴侣密码查看器</string>
+   <!--  <string name="app_name">WiFi伴侣密码查看器一万能钥匙</string> -->
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

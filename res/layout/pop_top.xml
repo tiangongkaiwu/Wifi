@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_pop_share"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_pop_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_pop_share"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="5dp"
+            android:text="分享"
+            android:textColor="#0a9e48"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="180dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/ll_pop_update"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_pop_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_pop_update"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="5dp"
+            android:text="版本更新"
+            android:textColor="#0a9e48"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="180dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/ll_pop_exit"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_pop_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_pop_exit"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="5dp"
+            android:text="退出应用"
+            android:textColor="#0a9e48"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
